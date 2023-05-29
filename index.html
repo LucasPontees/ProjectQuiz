@@ -19,18 +19,30 @@
             <h4>Pergunta</h4>
           </div>
           <div class="card-body">
-            <p>Qual é a capital do Brasil ?</p>
+            <p>Qual é o melhor time do Rio ?</p>
             <form>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="resposta" id="resposta1" value="Rio Grande do Sul">
+                <input class="form-check-input" type="radio" name="resposta" id="resposta1" value="Botafogo">
                 <label class="form-check-label" for="resposta1">
-                  Rio Grande do Sul
+                  Botafogo
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="resposta" id="resposta3" value="Brasilia">
+                <input class="form-check-input" type="radio" name="resposta" id="resposta3" value="Flamengo">
+                <label class="form-check-label" for="resposta2">
+                  Flamengo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="resposta" id="resposta3" value="Fluminense">
                 <label class="form-check-label" for="resposta3">
-                  Brasilia
+                 Fluminense
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="resposta" id="resposta3" value="Vasco da Gama">
+                <label class="form-check-label" for="resposta4">
+                  Vasco da Gama
                 </label>
               </div>
               <button type="button" class="btn btn-primary" onclick="verificarResposta()">Verificar</button>
@@ -44,12 +56,12 @@
 
   <script>
     function verificarResposta() {
-      var respostaCorreta = "Brasilia";
+      var respostaCorreta = "Botafogo";
       var respostaSelecionada = document.querySelector('input[name="resposta"]:checked').value;
       var resultadoDiv = document.getElementById("resultado");
 
       if (respostaSelecionada === respostaCorreta) {
-        resultadoDiv.innerHTML = '<div class="alert alert-success" role="alert">Resposta correta!</div>';
+        resultadoDiv.innerHTML = '<div class="alert alert-success" role="alert">Resposta correta! Segue o lider!</div>';
         
       } else {
         resultadoDiv.innerHTML = '<div class="alert alert-danger" role="alert">Resposta errada. Tente novamente!</div>';
